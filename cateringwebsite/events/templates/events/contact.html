@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %}Contact - Hanie's Catering{% endblock %}
+{% block content %}
+<section class="contact container">
+    <h2>Get in Touch</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+{% endblock %}

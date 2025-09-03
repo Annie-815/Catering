@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}About Us - Hanie's Catering{% endblock %}
+{% block content %}
+<section class="about container">
+    <section class="our-story">
+        <h2>Our Story</h2>
+        <p>Welcome to Hanie's Caterers — where passion meets flavor. 
+            Our journey began with a dream to bring exquisite taste and exceptional service 
+            to every occasion. Every dish we prepare carries a piece of our story, 
+            crafted with love and dedication
+        </p>
+    </section>
+
+    <h3>Meet The Team</h3>
+    <div class="grid-3">
+        <div class="card">
+            <img src="{% static 'images/chef1.png' %}" alt="Chef">
+            <h2>Head Chef</h2>
+            <h4>Chef Maryanne</h4>
+            <p>Our head chef, known for her signature fusion dishes and elegant plating style.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/chef2.png' %}" alt="Chef">
+            <h2>Sous Chef</h2>
+            <h4>Chef Beatrice</h4>
+            <p>Specializes in corporate event menus that balance taste, health, and presentation.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/chef3.png' %}" alt="Chef">
+            <h2>Pastry Chef</h2>
+            <h4>Chef Naomi</h4>
+            <p>Brings creativity and a personal touch to private parties and intimate gatherings.</p>
+        </div>
+    </div>
+</section>
+
+    {% comment %} <script>// Typing Animation for "Our Story"
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = `Welcome to Hanie's Caterers — where passion meets flavor. 
+            Our journey began with a dream to bring exquisite taste and exceptional service 
+            to every occasion. Every dish we prepare carries a piece of our story, 
+            crafted with love and dedication.`;
+            
+            const typingElement = document.getElementById("ourStoryTyping");
+            let index = 0;
+            const speed = 40; // typing speed in ms
+
+            function typeWriter() {
+                if (index < text.length) {
+                    typingElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        });
+</script> {% endcomment %}
+
+    
+
+    
+{% endblock %}

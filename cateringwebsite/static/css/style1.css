@@ -1,0 +1,159 @@
+/* ===== Base Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    background-color: #0c0c0c; /* Dark premium look */
+    color: #fff;
+}
+
+/* ===== Sidebar Navigation ===== */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #111; /* darker nav */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ff9800; /* orange accent */
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+}
+
+.sidebar .nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links a:hover {
+    color: #ff9800;
+    padding-left: 8px;
+}
+
+/* ===== Main Content Area ===== */
+.main-content {
+    margin-left: 240px; /* push content beside sidebar */
+    flex: 1;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 100vh;
+    background: url('/static/images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.hero-text .btn {
+    background: #ff9800;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background: #e68900;
+}
+
+/* ===== Featured Section ===== */
+.featured {
+    padding: 80px 10%;
+    background: #0c0c0c;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+.featured p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* ===== Grid for Chef / Dishes ===== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.grid-2 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+}
+
+.grid-2 img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    color: #777;
+    font-size: 0.9rem;
+}

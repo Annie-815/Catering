@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Services - Hanie's Catering{% endblock %}
+
+{% block content %}
+<section class="services container">
+    <h1>Our Services</h1>
+    <div class="grid-3">
+        <div class="card">
+            <h1>Wedding Catering</h1>
+            <img src="{% static 'images/wedding.png' %}" alt="Wedding Catering">
+            <div class="card-text" data-text="Elegant and memorable dining experiences for your special day."></div>
+        </div>
+        <div class="card">
+            <h1>Corporate Events</h1>
+            <img src="{% static 'images/corporate.png' %}" alt="Corporate Events">
+            <div class="card-text" data-text="Professional and delicious meals for conferences, meetings, and launches."></div>
+        </div>
+        <div class="card">
+            <h1>Private Parties</h1>
+            <img src="{% static 'images/party.png' %}" alt="Private Parties">
+            <div class="card-text" data-text="Personalized menus for birthdays, anniversaries, and intimate gatherings."></div>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero h2 {
+    font-size: 2.5rem;
+    color: #1ab4f1ff;
+    margin-bottom: 10px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 15px;
+    color: #333;
+    font-size: 1rem;
+    min-height: 60px; /* space for text */
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    border-top: 1px solid #eee;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".card-text");
+
+    cards.forEach((card, index) => {
+        let text = card.getAttribute("data-text");
+        let i = 0;
+        card.textContent = ""; // clear initial text
+
+        function typeWriter() {
+            if (i < text.length) {
+                card.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 30); // typing speed
+            }
+        }
+
+        // start each card's typing with delay
+        setTimeout(typeWriter, index * 1000);
+    });
+});
+</script>
+{% endblock %}

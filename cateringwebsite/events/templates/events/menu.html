@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Menu - Hanie's Catering{% endblock %}
+{% block content %}
+<section class="menu container">
+    <h2>Our Menu</h2>
+    <div class="grid-3">
+        {% for item in menu_items %}
+        <div class="card">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <span class="price">KES {{ item.price }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

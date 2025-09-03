@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav-links li {
+    margin: 15px 0;
+}
+
+.sidebar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sidebar .nav-links a:hover {
+    color: #ff9800;
+}
+
+.main-content {
+    margin-left: 240px; /* space for sidebar */
+    padding: 20px;
+    flex: 1;
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+.hero { height: 70vh; background: url('/static/images/hero.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; } .hero-text h2 { font-size: 3rem; color: #ff6f3c; } .btn { display: inline-block; background: #ff6f3c; padding: 0.7rem 1.5rem; color: #fff; border-radius: 5px; text-decoration: none; } .container { width: 80%; margin: auto; padding: 2rem 0; } .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; } .card { background: #1f1f1f; padding: 1rem; border-radius: 8px; text-align: center; } .card img { max-width: 100%; border-radius: 8px; } .price { color: #ff6f3c; font-weight: bold;
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #555;
+}
